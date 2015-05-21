@@ -2,7 +2,7 @@
 
 Wordpress theme built for Tenacitas based on html5 blank theme.
 
-Credit:
+Used grunt to handle task management, Sass to handle styles and a few other extremely helpful tasks.
 
 * Sass http://sass-lang.com/
 * Grunt http://gruntjs.com/

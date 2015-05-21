@@ -1,0 +1,28 @@
+.icon {
+  display: table-cell;
+  background: url('../sprites/sprites.png') no-repeat;
+
+	&--lg-linkedin{
+    @include sprite($lg-linkedin);    
+	}
+
+	&--lg-twitter{
+    @include sprite($large-twitter); 
+	}
+
+	&--phone{
+    @include sprite($phone-icon); 
+	}
+
+	&--mail{
+    @include sprite($mail-icon); 
+	}
+
+	&--location{
+    @include sprite($locate-icon);
+	}
+
+	&--quote{
+    @include sprite($quote);
+	}
+}

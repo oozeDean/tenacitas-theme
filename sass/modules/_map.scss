@@ -1,0 +1,71 @@
+.map {
+	@include transition(all, 1s);
+	width: 100vw;
+	height: 0;
+
+	&.open {
+		height: 400px;
+
+		@media (min-width: $med) {
+			height: 60vh;
+		}
+	}
+
+	&__button {
+		@include transition(all, 1s);
+		color: $white;
+		// font-family:'Myriad Pro Regular', Arial, sans-serif;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 500;
+		border: 1px solid $white;
+		display: inline-block;
+		margin-top: 30px;
+		padding: 15px 40px;
+		text-decoration: none;
+
+		&:hover {
+			background-color: $white;
+			color: #8e98a1;
+		}
+
+		@media (max-width: $med) {
+			margin-top: 20px;
+			width: 100%;
+		}
+
+		@media (min-width: $med) {
+			padding: 15px 60px;
+		}
+
+		&--solid {
+			background-color: rgba(255,255,255,0.2);
+		}
+
+		&--center {
+			left: 0;
+			margin: 0 auto;
+			position: absolute;
+			text-align: center;
+			right: 0;
+			width: 80%;
+
+			@media (min-width: $med) {
+				width: 300px;
+			}
+		}
+
+		&--bottom {
+			bottom: 20px;
+			left: 0;
+			margin: 0 auto;
+			position: absolute;
+			text-align: center;
+			right: 0;
+			width: 80%;
+
+			@media (min-width: $med) {
+				width: 300px;
+			}
+		}
+	}
+}

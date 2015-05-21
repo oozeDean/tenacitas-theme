@@ -1,0 +1,55 @@
+.wpcf7-form {
+	
+	p {
+		font-family: 'roboto', sans-serif;
+		font-weight: 500;
+		margin-bottom: 5px;
+	}
+
+	input, textarea {
+		font-family: 'Merriweather', serif;
+		font-style: italic;
+		line-height: 36px;
+		padding-left: 10px;
+		padding-right: 10px;
+		width: 100%;
+	}
+
+	textarea {
+		height: 200px;
+	}
+
+	input[type="submit"] {
+		@include transition(background, 1s);
+		background: none;
+		border: 1px solid $white;
+		color: $white;
+		font-family: 'roboto', sans-serif;
+		font-size: 1.4em;
+		font-style: normal;
+		font-weight: 500;
+		margin-top: 20px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		width: 100%;
+
+		@media (min-width: $med) {
+			padding-left: 40px;
+			padding-right: 40px;
+			width: auto;
+		}
+
+		&:hover {
+			background: $white;
+			color: #717F89;
+		}
+	}
+
+	.submit {
+		text-align: center;
+	}
+
+	.wpcf7-response-output {		
+		padding: 0.8em 1em;
+	}
+}

@@ -1,0 +1,162 @@
+.section {
+	overflow: hidden;
+	position: relative;
+	z-index: 10;
+
+	&--first {
+		background-repeat: no-repeat;
+		padding-top: 80px;
+		min-height: 480px;
+		//min-height: 100vh;
+		z-index: 1; 
+
+		@media (max-width: $med) {
+			background-position: center center;
+			background-size: auto 100%; 
+		}
+
+		@media (min-width: $med) {
+			background-size: cover;
+			min-height: 100vh;
+			padding-top: 100px;
+		}
+
+		article { 
+			h2 {
+				font-size: 1.4em;
+				line-height: 1.6em;
+
+				@media (min-width: $large) {
+					font-size: 1.4em;
+					line-height: 1.6em;
+				}
+			}
+			.panel-grid-cell {
+				margin-bottom: 10px !important;
+			}
+		}
+
+		.content__inner {
+			h2 {
+				font-size: 1.2em;
+				line-height: 1.2em;
+
+				@media (min-width: $large) {
+					font-size: 1.4em;
+					line-height: 1.4em;
+				}
+			}
+		}
+
+		li {
+	    font-family: 'Merriweather', serif;
+		}
+
+		@media (min-width: $large) {
+
+			h2 {
+				
+			}
+
+			p {
+				font-size: 0.8em;
+			}
+		}
+	}
+
+	&--home {
+		@include transition(background, 1s);
+		padding-top: 120px;
+
+		@media (min-width: $med) {
+			padding-top: 160px;
+		}
+	}
+
+	&--grey {
+		background: #e3e5e8;
+		border-bottom: 2px solid $white;
+	}
+
+	&--light-grey {
+		background: #ECEDEF;
+		border-bottom: 2px solid $white;
+	}
+
+	&--blue {
+		background: #5B92C8;
+	}
+
+	&--light-blue {
+		background: #8bbbc9;
+	}
+
+	&--turquoise {
+		background: #6BA3B7;
+	}
+}
+
+.hotspot {
+	@include transition(all, 0.5s);
+	@include vertical-align;	
+	cursor: pointer;
+	opacity: 0.3;
+	z-index: 9999;
+
+	&--left {
+		left: -40px;
+
+		&:hover {
+			left: 0;
+			opacity: 1;
+		}
+	}
+
+	&--right {
+		right: -40px;
+
+		&:hover {
+			right: 0;
+			opacity: 1;
+		}
+	}
+}
+
+.carousel-button {
+  background: #000;
+  cursor: pointer;
+  display: none;	
+  height: 140px;
+  width: 70px;
+
+	@media (min-width: $med) {
+		display: block;
+	}
+
+	&--left {
+		border-top-right-radius: 900px;
+  	border-bottom-right-radius: 900px;
+
+  	img {
+  		left: 20px;
+  	}
+	}
+
+	&--right {	
+		border-top-left-radius: 900px;
+  	border-bottom-left-radius: 900px;
+
+  	img {
+  		right: 20px;
+  	}
+	}
+
+	img {
+		position: absolute;
+		top: 50px;
+	}
+}
+
+.js-carousel-item {
+	display: none;
+}

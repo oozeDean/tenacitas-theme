@@ -1,0 +1,25 @@
+/** Utilities **/
+
+.mobile-hide {
+	display: none;
+
+	@media (min-width: $large) {
+		display: block;
+	}
+}
+
+.padding-top {
+	padding-top: 20px;
+}
+
+.padding-bottom {
+	padding-bottom: 20px;
+}
+
+.center {
+	text-align: center;
+}
+
+.hide {
+	display:none;
+}

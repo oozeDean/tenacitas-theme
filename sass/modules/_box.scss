@@ -1,0 +1,66 @@
+.box {	
+	background-repeat: no-repeat !important;
+	background-size: cover;
+	min-height: 200px;
+	position: relative;
+	width: 100%;
+
+	&:hover, &:focus {
+		.textwidget {
+			p {
+				@include transition(background, 0.7s);
+				background-color: rgba( 91, 146, 200,0.4);
+			}
+		}
+	}
+
+	.textwidget {
+		height: 200px;
+		position: relative;
+		width: 100%;
+
+	 	p {
+	 		font-family: 'Roboto', serif;
+	 		font-size: 1.6em;
+	 		font-weight: 500;
+	 		height: 200px;
+	 		line-height: 200px;
+	 		opacity: 1 !important;
+		 	text-align: center;
+
+		 	@media (min-width: $med) {
+		 		font-size: 1.4em;
+		 	}
+	 	}
+
+	 	a {
+	 		color: $white;
+	 		display: block;
+	 		text-decoration: none;
+
+	 		&:hover {
+	 			text-decoration: none;
+	 		}
+	 	}
+	}
+
+	&__line {
+		background: $white;
+		height: 2px;
+		left: 0;
+		margin: 0 auto;
+		right: 0;
+		position: absolute;
+		top: 40%;
+		width: 20px;
+	}
+}
+
+.cta {
+	padding-bottom: 10px;
+
+	@media (min-width: $large) {
+		padding-top: 50px;
+		padding-bottom: 80px;
+	}
+}

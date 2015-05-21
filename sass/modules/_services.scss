@@ -1,0 +1,72 @@
+.services {
+
+	&__block {
+
+		@media (min-width: $med) {
+			float: left;
+			width: 100%;
+		}
+
+		&--right {
+			@media (min-width: $med) {
+				.services__content {
+					float: left;
+				}
+
+				.services__img {
+					float: right;
+				}
+			}
+		}
+	}
+
+	&__img {
+		display: none;
+		background-size: cover;
+    height: auto;
+    width: 100%;
+    float: none;
+    
+    @media (min-width: $med) {
+    	display: block;
+    	height: 400px;
+    	float: left;
+    	width: 40%;
+    }
+	}
+
+	&__content {
+    float: none;
+    width: 100%;
+    padding: 0 40px 40px 40px;
+    min-height: 233px;
+
+    h2 {
+    	font-size: 1.6em;
+			line-height: 1.6em;
+			background: transparent url("/wp-content/themes/jfd/img/title-lines.png")no-repeat left top;
+			padding-top: 50px;
+    }
+
+    li {
+	    font-family: 'Merriweather', serif;
+		}
+
+    @media (min-width: $med) {
+    	float: right;
+    	height: 400px;
+    	width: 60%;
+    }
+
+    @media (min-width: $med) {
+	    &--align {
+	    	float: left;
+	    	max-width: 580px;
+
+	    	.services__block--right & {
+	    		float: right;
+	    	}
+	    }
+  	}
+	}
+}

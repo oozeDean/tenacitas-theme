@@ -1,0 +1,40 @@
+.social {
+	display: inline;
+	float: left;
+	margin-top: 40px;
+	padding-left: 20px;
+	width: 100px;
+
+	@media (min-width: $large) {
+		float: right;
+		margin-top: 52px;
+		padding-left: 0;
+	}
+
+	&__list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__item {
+		@include transition(all, 1s);
+		float: left;
+		margin-left: 5px;
+		margin-right: 5px;
+
+		&:hover {
+			opacity: 0.6;
+		}
+
+		img {
+			height: auto;
+			width: 22px;
+		}
+
+		@media (min-width: $large) {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+	}
+}

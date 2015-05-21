@@ -1,0 +1,55 @@
+.contact-box {
+	min-height: 80px;
+	padding-top: 30px;
+	position: relative;
+	text-align: center;
+
+	&--line {
+		margin-bottom: 40px;
+
+		@media (min-width: $med) {
+			border-right: 1px solid $white;
+			margin-bottom: 0;
+		}
+	}
+
+	&__text {
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__icon {
+		@include vertical-align;
+		left: 0;
+		margin: 0 auto;
+		right: 0;
+		top: 0;
+	}
+
+	&__middle-container {
+		@include vertical-align;
+		list-style: none;
+		left: 0;
+		margin: 10px auto;
+		padding: 0;
+		right: 0;
+		text-align: center;
+		width: 120px;
+
+		li {
+			@include transition(all, 1s);
+			display:inline;
+			float: left;
+			margin: 0 5px;
+
+			&:hover {
+				opacity: 0.6;
+			}
+		}
+	}
+}

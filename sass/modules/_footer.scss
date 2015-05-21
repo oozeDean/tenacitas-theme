@@ -1,0 +1,89 @@
+.footer {
+	background: #717F89;
+
+	&--float {
+		float: left;
+		width: 100%;
+	}
+
+	@media (min-width: $med) {
+
+	}
+
+	@media (min-width: $large) {
+		background: #717F89 url("/wp-content/themes/jfd/img/footer-lines.png")no-repeat 10% 12px;
+	}
+
+	@media (min-width: $xl) {
+		background: #717F89 url("/wp-content/themes/jfd/img/footer-lines.png")no-repeat 25% 12px;
+	}
+
+	&__tagline {
+		color: #425563;
+		font-family: 'Merriweather', serif;
+		font-size: 1.4em;
+		font-style: italic;
+		font-weight: 100;
+		margin-bottom: 10px;
+		
+		@media (min-width: $med) {
+			font-size: 1.1em;
+			margin-bottom: 40px;
+			text-align: center;
+		}
+	}
+
+	&__legal {
+		color: #425563;	
+		font-family: 'Roboto', sans-serif;	
+		line-height: 1.4em;
+
+		a {
+			color: #425563;	
+			text-decoration: none;	
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		@media (min-width: $med) {
+			bottom: 14px;
+			font-size: 0.8em;
+			position: absolute;
+			right: 20px;
+			text-align: right;
+		}
+	}
+}
+
+#menu-footer {
+	display: inline-block;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 10px 0;
+
+	li {
+		line-height: 1.4em;
+
+		a {
+			color: #425563;
+			text-decoration: none;
+
+			@media (min-width: $med) {
+				font-size: 0.8em;
+				line-height: 1em;
+			}
+		}
+
+		&:hover {
+			a {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	@media (min-width: $med) {
+		margin-bottom: 0;
+	}
+}

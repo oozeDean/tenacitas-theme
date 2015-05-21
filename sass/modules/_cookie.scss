@@ -1,0 +1,25 @@
+.single-post, .page {
+	#catapult-cookie-bar {
+		@include transition(all, 1s);
+		color: $white;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		opacity: 0.9;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		@media (min-width: $med) {
+			font-size: 0.8em;
+		}
+
+		a {
+			color: $white;
+		}
+
+		button {
+
+		}
+	}
+}

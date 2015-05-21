@@ -1,0 +1,107 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+$large-twitter-x: 0px;
+$large-twitter-y: 99px;
+$large-twitter-offset-x: 0px;
+$large-twitter-offset-y: -99px;
+$large-twitter-width: 47px;
+$large-twitter-height: 38px;
+$large-twitter-total-width: 47px;
+$large-twitter-total-height: 227px;
+$large-twitter-image: '../sprites/sprite.png';
+$large-twitter: 0px 99px 0px -99px 47px 38px 47px 227px '../sprites/sprite.png';
+$lg-linkedin-x: 0px;
+$lg-linkedin-y: 137px;
+$lg-linkedin-offset-x: 0px;
+$lg-linkedin-offset-y: -137px;
+$lg-linkedin-width: 42px;
+$lg-linkedin-height: 42px;
+$lg-linkedin-total-width: 47px;
+$lg-linkedin-total-height: 227px;
+$lg-linkedin-image: '../sprites/sprite.png';
+$lg-linkedin: 0px 137px 0px -137px 42px 42px 47px 227px '../sprites/sprite.png';
+$locate-icon-x: 0px;
+$locate-icon-y: 179px;
+$locate-icon-offset-x: 0px;
+$locate-icon-offset-y: -179px;
+$locate-icon-width: 36px;
+$locate-icon-height: 48px;
+$locate-icon-total-width: 47px;
+$locate-icon-total-height: 227px;
+$locate-icon-image: '../sprites/sprite.png';
+$locate-icon: 0px 179px 0px -179px 36px 48px 47px 227px '../sprites/sprite.png';
+$mail-icon-x: 0px;
+$mail-icon-y: 0px;
+$mail-icon-offset-x: 0px;
+$mail-icon-offset-y: 0px;
+$mail-icon-width: 43px;
+$mail-icon-height: 32px;
+$mail-icon-total-width: 47px;
+$mail-icon-total-height: 227px;
+$mail-icon-image: '../sprites/sprite.png';
+$mail-icon: 0px 0px 0px 0px 43px 32px 47px 227px '../sprites/sprite.png';
+$phone-icon-x: 0px;
+$phone-icon-y: 65px;
+$phone-icon-offset-x: 0px;
+$phone-icon-offset-y: -65px;
+$phone-icon-width: 33px;
+$phone-icon-height: 34px;
+$phone-icon-total-width: 47px;
+$phone-icon-total-height: 227px;
+$phone-icon-image: '../sprites/sprite.png';
+$phone-icon: 0px 65px 0px -65px 33px 34px 47px 227px '../sprites/sprite.png';
+$quote-x: 0px;
+$quote-y: 32px;
+$quote-offset-x: 0px;
+$quote-offset-y: -32px;
+$quote-width: 37px;
+$quote-height: 33px;
+$quote-total-width: 47px;
+$quote-total-height: 227px;
+$quote-image: '../sprites/sprite.png';
+$quote: 0px 32px 0px -32px 37px 33px 47px 227px '../sprites/sprite.png';
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}

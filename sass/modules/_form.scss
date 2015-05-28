@@ -51,5 +51,17 @@
 
 	.wpcf7-response-output {		
 		padding: 0.8em 1em;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.wpcf7-validation-errors {
+		background: #c6b900; 
+		border: 2px solid #c6b900; 
+	}
+
+	.wpcf7-mail-sent-ok {
+		background: #6BA3B7; 
+		border: 2px solid #6BA3B7; 
 	}
 }

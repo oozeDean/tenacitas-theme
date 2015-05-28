@@ -1,6 +1,10 @@
-<?php /* Template Name: Standard page template */ get_header(); ?>
-<?php global $post; ?>
 <?php
+/* Template Name: Standard page template */
+
+get_header();
+
+global $post;
+
 if (is_mobile()) {
     $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large');
 } else {
@@ -259,7 +263,7 @@ if (is_mobile()) {
 
 						<div class="content content--padding-top">
 
-							<h3 class="heading heading--grey heading--small-margin center">Filter by:</h2>
+							<h3 class="heading heading--grey heading--small-margin center">Filter by:</h3>
 
 							<ul class="filter js-filter">
 								<!-- <li class="filter__item"><a href="#all" class="filter__button filter__button--first">All</a></li> -->

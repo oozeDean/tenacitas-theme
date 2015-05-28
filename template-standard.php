@@ -282,16 +282,32 @@ if (is_mobile()) {
 						        'post_type' => 'post'
 						    );
 
+						    $counter = 0;
+
 						    $post_query = new WP_Query($args);
 
 								if($post_query->have_posts() ) {
 						  		while($post_query->have_posts() ) {
-						    		$post_query->the_post(); ?>
+						    		$post_query->the_post(); $counter++;?>
 						    		<div class="news__item <?php $category = get_the_category(); 
 				echo $category[0]->cat_name; ?>">
 						    			<a href="<?php echo get_permalink(); ?>">
 							    			<div class="news__img">
-							    				<?php the_post_thumbnail('medium'); ?>
+							    				<?php
+				    			
+									    			if ($counter < 5) {
+															if( $counter % 2 == 0 ) {
+																the_post_thumbnail('thumb-even');
+															} else {
+																the_post_thumbnail('thumb-odd');
+															}
+														} else if ($counter === 5 || $counter === 6 || $counter === 9 || $counter === 10 || $counter === 13 || $counter === 14|| $counter === 17 || $counter === 18 || $counter === 21 || $counter === 22) {
+															the_post_thumbnail('thumb-even');
+														} else {
+															the_post_thumbnail('thumb-odd');
+														}
+
+													?>
 							    				<div class="news__img--hidden">Get the full story &raquo;</div>
 							    			</div>
 							    			<div class="news__text">

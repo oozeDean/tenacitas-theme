@@ -88,7 +88,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 				        <li>
 				        	<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
 					        	<div class="news__img">
-					        		<?php the_post_thumbnail('medium'); ?>
+					        		<?php the_post_thumbnail('thumb-even'); ?>
 					        		<div class="news__img--hidden">Get the full story &raquo;</div>
 					        	</div>
 					        	<p class="news__text--date news-article__related--padding"><?php the_time( get_option( 'date_format' ) ); ?></p>

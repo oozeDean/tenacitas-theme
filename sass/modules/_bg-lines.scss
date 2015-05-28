@@ -2,6 +2,7 @@
 
 	@media (max-height: 640px) {
 		background: none !important;
+		display: none;
 	}
 
 	@media (min-width: $large) {

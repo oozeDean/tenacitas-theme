@@ -117,11 +117,16 @@
 		font-family: 'Roboto', sans-serif;
 		padding: 15px;
 
+		@media (min-width: $med) {
+			min-height: 165px;
+		}
+
 		&--content {
 			color: #717F89;
 			font-family: 'roboto', sans-serif;
-			font-size: 1.2em;
+			font-size: 1.5em;
 			font-weight: bold;
+			line-height: 1.3em;
 			margin-bottom: 20px;
 
 			p {

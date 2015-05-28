@@ -109,6 +109,9 @@ h1 {
 	line-height:1.4em;
 	margin-bottom: 5px; 
 	margin:0 0 0.6em 0;
+	position: absolute;
+	top: 0;
+	left: 80px;
 }
 h2 {
 	font-family: 'roboto', sans-serif;
@@ -131,6 +134,7 @@ h4, h5, h6 {
 }
 
 h5, h6 {
+	font-size: 1.2em;
 	font-style: italic;
 }
 

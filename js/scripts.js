@@ -214,7 +214,9 @@ tenacitas.news = (function () {
   function initMasnry() {
   	// var container = document.querySelector('#js-news');
 		jQuery('#js-news').isotope({
-      itemSelector: '.news__item'
+      layoutMode: 'masonry',
+      itemSelector: '.news__item',
+      sortBy : 'original-order'
     });
   }
 
@@ -395,12 +397,12 @@ tenacitas.contact = (function () {
       var map;
       function initialize() {
         var myLatlng = new google.maps.LatLng(25.7606013, -80.1914913);
-        var styles = [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e9e5dc"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#e9e5dc"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#02a4be"}]}];
+        var styles = [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e9e5dc"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#e9e5dc"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#005d98"}]}];
         var styledMap = new google.maps.StyledMapType(styles,
           {name: "Styled Map"});
 
         var mapOptions = {
-          zoom: 12,
+          zoom: 10,
           center: myLatlng,
           scrollwheel: false,
           panControl: false,
